@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: turbine
+
+server:
+  port: 5001
+
+#从哪些服务去聚合集群服务日志
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+
+#从指定服务名聚合，再给聚合的取个名
+turbine:
+  app-config: zuul
+  cluster-name-expression: new String("default")

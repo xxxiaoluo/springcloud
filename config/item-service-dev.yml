@@ -1,0 +1,31 @@
+# 向注册中心注册的名字
+# 从配置中心下载的配置（优先级最高）会覆盖本地配置、本地命令参数，为避免覆盖，配置override-none=true
+spring:
+  application:
+    name: item-service
+  cloud:
+    config:
+      override-none: true
+  rabbitmq:
+    host: 192.168.64.140  # wht6.cn
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: vh0
+
+  zipkin:
+    sender:
+      type: rabbit
+
+# item    8001
+# user    8101
+# order   8201
+server:
+  port: 8001
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka

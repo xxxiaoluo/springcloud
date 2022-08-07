@@ -1,0 +1,15 @@
+## bootstrap.yml
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+#spring:
+#  cloud:
+#    config:
+#      discovery:
+#        enabled: true   # 从注册表发现配置中心的地址
+#        service-id: config-server
+#      name: item-service
+#      profile: dev
+#

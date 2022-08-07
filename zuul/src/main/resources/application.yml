@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: zuul
+#  rabbitmq:
+#    host: 192.168.64.140  # wht6.cn
+#    port: 5672
+#    username: admin
+#    password: admin
+#    virtual-host: vh0
+#  zipkin:
+#    sender:
+#      type: rabbit
+
+server:
+  port: 3001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+zuul:
+  routes:
+    item-service: /item-service/**
+    user-service: /user-service/**
+    order-service: /order-service/**
+  retryable: true
+
+# 对所有服务的通用配置
+# 一个服务最大的重试次数
+ribbon:
+  MaxAutoRetries: 1
+
+## 针对一个服务单独配置重试参数
+item-service:
+  ribbon:
+    MaxAutoRetries: 1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

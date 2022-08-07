@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: user-service
+  cloud:
+    config:
+      override-none: true
+  rabbitmq:
+    host: 192.168.64.140  # wht6.cn
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: vh0
+
+  zipkin:
+    sender:
+      type: rabbit
+
+# item      8001
+# user      8101
+# order     8201
+server:
+  port: 8101
+
+# 自定义配置属性
+# demo 数据
+# [{id:7,username:xxx,password:xxx}, {8}, {9}]
+sp:
+  user-service:
+    users: "[{\"id\":7, \"username\":\"abc\",\"password\":\"123\"},
+             {\"id\":8, \"username\":\"def\",\"password\":\"456\"},
+             {\"id\":1, \"username\":\"111\",\"password\":\"111\"},
+             {\"id\":2, \"username\":\"222\",\"password\":\"222\"},
+             {\"id\":3, \"username\":\"333\",\"password\":\"333\"},
+             {\"id\":4, \"username\":\"444\",\"password\":\"444\"},
+             {\"id\":5, \"username\":\"555\",\"password\":\"555\"},
+             {\"id\":6, \"username\":\"666\",\"password\":\"666\"},
+             {\"id\":99, \"username\":\"aaa\",\"password\":\"bbb\"},
+             {\"id\":9, \"username\":\"ghi\",\"password\":\"789\"}]"
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
