@@ -2,15 +2,10 @@ package com.learn.service;
 
 import com.learn.feign.ItemClient;
 import com.learn.feign.UserClient;
-import com.learn.pojo.Item;
 import com.learn.pojo.Order;
-import com.learn.pojo.User;
-import com.web.utils.JsonResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 @Slf4j

@@ -1,3 +1,5 @@
+com\learn\controller\OrderController.class
+com\learn\feign\UserClient.class
+com\learn\feign\ItemClient.class
 com\learn\OrderServiceApplication.class
 com\learn\service\OrderServiceImpl.class
-com\learn\controller\OrderController.class
