@@ -15,4 +15,3 @@ spring:
         service-id: config-server
       name: item-service
       profile: dev
-

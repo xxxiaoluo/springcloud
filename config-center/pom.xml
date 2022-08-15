@@ -29,10 +29,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!--  以下4个依赖用为刷新配置所需依赖  -->
+        <!--  此依赖整合了rabbitmq  -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
+        <!--   配置刷新组件，作用：接收消息和发送消息   -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-bus</artifactId>
@@ -41,7 +44,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-stream-binder-rabbit</artifactId>
         </dependency>
-
+        <!--  通过在spring cloud config加actuator 将/actuator/bus-refresh这个api路径暴露出来 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
