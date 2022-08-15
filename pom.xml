@@ -16,8 +16,6 @@
         <module>zuul</module>
         <module>hystrix-dashboard</module>
         <module>turbine</module>
-        <module>springcloud-config</module>
-        <module>springcloud-config</module>
         <module>config-center</module>
     </modules>
     <parent>
