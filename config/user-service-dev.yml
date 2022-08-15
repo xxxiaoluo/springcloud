@@ -4,13 +4,12 @@ spring:
   cloud:
     config:
       override-none: true
-  # Bus消息总线向rabbitmq发送yml配置已更新，需要rabbitmq再向三个业务服务发送消息通知让它们远程连接git更新配置
   rabbitmq:
-    host: 192.168.64.100
+    host: 192.168.64.140  # wht6.cn
     port: 5672
     username: admin
     password: admin
-    virtual-host: roy-virtual-host-test
+    virtual-host: vh0
 
   zipkin:
     sender:

@@ -2,7 +2,7 @@ spring:
   application:
     name: config-server
 
-# 配置在git上，配置git的url
+# 配置在git，配置git的url
   cloud:
     config:
       server:
@@ -10,24 +10,9 @@ spring:
           uri: https://gitee.com/Mio-Luo/springcloud1
           search-paths: /config
 
-# 这里的rabbitmq不是原始依赖,是spring里整合的(这项目刷新配置需要)
-  rabbitmq:
-    host: 192.168.64.100  # wht6.cn
-    port: 5672
-    username: admin
-    password: admin
-    virtual-host: roy-virtual-host-test
-
 server:
   port: 6001
 eureka:
   client:
     service-url:
       defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
-
-# 把刷新路径先暴露出来(这项目刷新配置需要)
-management:
-  endpoints:
-    web:
-      exposure:
-        include: bus-refresh
