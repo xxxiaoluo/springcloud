@@ -24,7 +24,7 @@ public class ItemController {
         // 随机阻塞，90%概率执行阻塞代码
         if (Math.random() < 0.9) {
             // 暂停 [0, 5000) 毫秒
-            int t = new Random().nextInt(50000);
+            int t = new Random().nextInt(500);
             System.out.println("暂停："+t);
             Thread.sleep(t);
         }

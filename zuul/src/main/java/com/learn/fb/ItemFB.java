@@ -59,8 +59,7 @@ public class ItemFB implements FallbackProvider {
 
             @Override
             public InputStream getBody() throws IOException {
-                String json = JsonResult
-                        .err().code(500).msg("调用商品失败").toString();
+                String json = JsonResult.err().code(500).msg("调用商品失败").toString();
 
                 return new ByteArrayInputStream(json.getBytes("UTF-8"));
             }

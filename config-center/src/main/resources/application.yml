@@ -26,6 +26,8 @@ eureka:
       defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
 
 # 把刷新路径先暴露出来(这项目刷新配置需要)
+# 访问 http://localhost:6001/actuator
+# 里面暴露出来的url: /bus-refresh/{destination} 这个url占位符可以指定服务id,然后对指定服务发送配置刷新消息.  /bus-refresh 刷新全部
 management:
   endpoints:
     web:
