@@ -28,6 +28,9 @@ eureka:
 # 把刷新路径先暴露出来(这项目刷新配置需要)
 # 访问 http://localhost:6001/actuator
 # 里面暴露出来的url: /bus-refresh/{destination} 这个url占位符可以指定服务id,然后对指定服务发送配置刷新消息.  /bus-refresh 刷新全部
+#
+# 测试刷新步骤 : 先在yml配置文件里修改配置,在使用到配置的类上加@RefreshScope注解,再将修改的配置push到gitee,再访问 http://localhost:6001/actuator/{...} 指定刷新
+# 访问后就已刷新,再用@Value获取测试一下,能获取到就是成功
 management:
   endpoints:
     web:

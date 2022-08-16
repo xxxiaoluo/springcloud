@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@RefreshScope
 @Slf4j
 @Service
 public class UserServiceImpl implements UserService {
