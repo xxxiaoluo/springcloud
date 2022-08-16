@@ -10,7 +10,7 @@ spring:
     port: 5672
     username: admin
     password: admin
-    virtual-host: roy-virtual-host-test
+#    virtual-host: roy-virtual-host-test
 
   zipkin:
     sender:
@@ -35,7 +35,7 @@ sp:
              {\"id\":4, \"username\":\"444\",\"password\":\"444\"},
              {\"id\":5, \"username\":\"555\",\"password\":\"555\"},
              {\"id\":6, \"username\":\"666\",\"password\":\"666\"},
-             {\"id\":222, \"username\":\"aaa\",\"password\":\"bbb\"},
+             {\"id\":333, \"username\":\"333\",\"password\":\"222\"},
              {\"id\":100, \"username\":\"roy\",\"password\":\"roy\"},
              {\"id\":9, \"username\":\"ghi\",\"password\":\"789\"}]"
 
@@ -43,4 +43,4 @@ sp:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+      defaultZone: http://eureka1:2001/eureka
