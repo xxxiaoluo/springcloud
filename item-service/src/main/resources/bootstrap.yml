@@ -3,7 +3,7 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+      defaultZone: http://eureka1:2001/eureka
 
 
 # 连接注册中心到config-server连接配置中心,找到名为item-service,profile为dev的文佳

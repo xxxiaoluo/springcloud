@@ -12,7 +12,7 @@ spring:
 
 # 这里的rabbitmq不是原始依赖,是spring里整合的(这项目刷新配置需要)
   rabbitmq:
-    host: 192.168.64.100  # wht6.cn
+    host: 192.168.64.100
     port: 5672
     username: admin
     password: admin
@@ -23,7 +23,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+      defaultZone: http://eureka1:2001/eureka
 
 # 把刷新路径先暴露出来(这项目刷新配置需要)
 # 访问 http://localhost:6001/actuator

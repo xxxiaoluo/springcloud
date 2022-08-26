@@ -25,7 +25,7 @@ eureka:
     service-url:
       # 可以从云服务商购买不同地点的eureka服务器
       # 自己的服务器只能写 defaultZone
-      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+      defaultZone: http://eureka1:2001/eureka
 
 ribbon:
   MaxAutoRetries: 1

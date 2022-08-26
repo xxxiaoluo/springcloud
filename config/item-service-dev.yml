@@ -9,7 +9,7 @@ spring:
 
 # Bus消息总线向rabbitmq发送yml配置已更新，需要rabbitmq再向三个业务服务发送消息通知让它们远程连接git更新配置
   rabbitmq:
-    host: 192.168.64.100  # wht6.cn
+    host: 192.168.64.100
     port: 5672
     username: admin
     password: admin
@@ -30,4 +30,5 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+      defaultZone: http://eureka1:2001/eureka
+
